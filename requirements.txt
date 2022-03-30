@@ -1,0 +1,7 @@
+pytest==7.1.1
+pytest-html==3.1.1
+xdist==0.0.2
+pandas==1.4.1
+xlrd==2.0.1
+openpyxl==3.0.9
+python-dateutil==2.8.2

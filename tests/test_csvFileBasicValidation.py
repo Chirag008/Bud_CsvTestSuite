@@ -3,10 +3,15 @@ import re
 import logging
 import src.CsvHandler as CsvHandler
 import src.ExcelHandler as ExcelHandler
+from src.ComparatorFunctions import ComparatorFunctions
 from src.CustomLogger import CustomLogger, ResultType
+from src.CsvHandler import ComparisonType
+from src.Patterns import Patterns
 
 logger = logging.getLogger(__name__)
 c_logger = CustomLogger(logger)
+patterns = Patterns()
+cmp_funcs = ComparatorFunctions()
 
 
 @pytest.fixture
@@ -86,3 +91,172 @@ def test_TC_7_Validate_that_the_input_csv_file_is_not_empty(input_csv_file_path)
     row_count = CsvHandler.get_csv_file_row_count(input_csv_file_path, should_count_header=True)
     c_logger.print('is file empty - {}'.format(bool(row_count == 0)), ResultType.ACTUAL)
     assert row_count > 0, 'csv file is empty!'
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_8_Validate_the_MasterAccount_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'MasterAccount'
+    pattern = patterns.boolean
+    expectation = 'MasterAccount field should be populated with one of the Boolean format values 0 or 1 or converted'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_9_Validate_the_State_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'State'
+    pattern = r'^[A-Z]{2}$'
+    expectation = 'State field should be populated with a valid 2-character state value'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_10_Validate_the_ZipCodePrefix_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'ZipCodePrefix'
+    pattern = r'^[\d]{5}$'
+    expectation = 'ZipCodePrefix field should be populated with the first 5 numbers of a customer’s zip code value'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_11_Validate_the_ZipCodeSuffix_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'ZipCodePrefix'
+    pattern = r'^[\d]{4}$'
+    expectation = 'ZipCodeSuffix field should be populated with the last 4 numbers of a customer’s zip code value'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_12_Validate_the_BirthDate_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'BirthDate'
+    pattern = patterns.date
+    expectation = 'BirthDate field should be populated or converted to a valid date format MM/DD/YYYY'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_13_Validate_the_EmailAddress_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'EmailAddress'
+    pattern = patterns.email
+    expectation = 'EmailAddress field should be populated with a standard email address format: {prefix}@{domain}.com'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_14_Validate_the_SSN_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'SSN'
+    pattern = r'^[0-9]{9}$'
+    expectation = 'SSN field should be populated with the format ######### (9 digits)'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_15_Validate_the_Income_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'Income'
+    pattern = patterns.number_or_decimal
+    expectation = 'Income field should be populated with a numeric format with or without decimals'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_17_Validate_the_EmploymentDate_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'EmploymentDate'
+    pattern = patterns.date
+    expectation = 'EmploymentDate field should be populated or converted to a valid date format MM/DD/YYYY'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_19_Validate_the_MemberStartDate_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'MemberStartDate'
+    pattern = patterns.date
+    expectation = 'MemberStartDate  field should be populated or converted to a valid date format MM/DD/YYYY'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_20_Validate_the_SavingsAccountFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'SavingsAccountFlag'
+    pattern = patterns.boolean
+    expectation = 'SavingsAccountFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_21_Validate_the_CheckingFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'CheckingFlag'
+    pattern = patterns.boolean
+    expectation = 'CheckingFlag field should be populated with one of the Boolean format values 0 or 1 or converted ' \
+                  'to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_22_Validate_the_CDFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'CDFlag'
+    pattern = patterns.boolean
+    expectation = 'CDFlag field should be populated with one of the Boolean format values 0 or 1 or converted ' \
+                  'to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_23_Validate_the_MoneyMarketFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'MoneyMarketFlag'
+    pattern = patterns.boolean
+    expectation = 'MoneyMarketFlag field should be populated with one of the Boolean format values 0 or 1 or converted ' \
+                  'to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_24_Validate_the_AutoLoanFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'AutoLoanFlag'
+    pattern = patterns.boolean
+    expectation = 'AutoLoanFlag field should be populated with one of the Boolean format values 0 or 1 or converted ' \
+                  'to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+def validate_column_value_as_per_standards(input_csv_file_path, col_name, c_type: ComparisonType, comparator,
+                                           expectation):
+    c_logger.print(f'{expectation}', ResultType.EXPECTED)
+    try:
+        list_values_not_following_condition = []
+        if c_type == ComparisonType.REGEX:
+            list_values_not_following_condition = CsvHandler.get_list_values_not_following_regex(input_csv_file_path,
+                                                                                                 col_name,
+                                                                                                 comparator)
+        elif c_type == ComparisonType.FUNCTION:
+            list_values_not_following_condition = CsvHandler.get_list_values_not_following_condition(
+                input_csv_file_path,
+                col_name,
+                comparator)
+        else:
+            raise Exception(f'{c_type} has not been implemented yet!')
+
+        if len(list_values_not_following_condition) == 0:
+            c_logger.print(f'{col_name} field value is following the pattern', ResultType.ACTUAL)
+        else:
+            c_logger.print(f'No of rows not matching the expected pattern - {len(list_values_not_following_condition)}.'
+                           f'\nFirst few values not matching the pattern - {list_values_not_following_condition[:10]}',
+                           ResultType.ACTUAL)
+        assert len(list_values_not_following_condition) == 0, f'all values in field {col_name} not following pattern'
+    except KeyError as e:
+        c_logger.print(f'{col_name} not present in input csv file', ResultType.ACTUAL)
+        raise e

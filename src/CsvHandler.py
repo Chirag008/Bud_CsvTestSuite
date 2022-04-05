@@ -1,7 +1,17 @@
 import csv
+import re
+from enum import Enum
+
 import pandas as pd
 
 from src import is_date
+from src.Patterns import Patterns
+pp = Patterns()
+
+
+class ComparisonType(Enum):
+    REGEX = 'regex'
+    FUNCTION = 'function'
 
 
 def get_csv_file_columns_list(csv_file_path, delimiter=','):
@@ -45,6 +55,25 @@ def get_column_name_to_type_mappping(csv_file_path, delimiter=','):
     return mapping
 
 
+def get_list_values_not_following_regex(csv_file_path, column_name, regex: str, delimiter=','):
+    df = pd.read_csv(csv_file_path, delimiter=delimiter)
+    regex = re.compile(regex)
+    filtered_result = filter(lambda x: not is_value_matches_regex(x, regex), df[column_name].tolist())
+    return list(filtered_result)
+
+
+def get_list_values_not_following_condition(csv_file_path, column_name, comparison_func, delimiter=','):
+    df = pd.read_csv(csv_file_path, delimiter=delimiter)
+    filtered_result = filter(lambda x: not comparison_func(x), df[column_name].tolist())
+    return list(filtered_result)
+
+
+def is_value_matches_regex(value, regex):
+    return bool(regex.match(str(value)))
+
+
 if __name__ == '__main__':
-    mapping = get_column_name_to_type_mappping('../resources/csv/Customer_MR_NoDup.csv')
-    print(mapping)
+    result = get_list_values_not_following_regex('../resources/csv/Customer_MR_NoDup.csv',
+                                                 'MasterAccount',
+                                                 '^[0|1]{1}$')
+    print(result)

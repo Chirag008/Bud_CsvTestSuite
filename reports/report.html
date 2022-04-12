@@ -1535,7 +1535,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 05-Apr-2022 at 22:22:42 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 12-Apr-2022 at 22:32:21 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -1554,8 +1554,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.8.7</td></tr></table>
     <h2>Summary</h2>
-    <p>21 tests ran in 10.36 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">15 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">6 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>49 tests ran in 32.50 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">37 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">12 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -1570,7 +1570,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_2_Validate_the_input_csv_file_schema[resources/csv/Customer_MR_NoDup.csv-resources/mappings/Customer File to Cunexus Mapping - Grouped.xlsx]</td>
-          <td class="col-duration">0.93</td>
+          <td class="col-duration">1.32</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1591,7 +1591,7 @@ column not found - [&#x27;Employer&#x27;, &#x27;Ssn&#x27;, &#x27;Suffix&#x27;]
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_10_Validate_the_ZipCodePrefix_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.39</td>
+          <td class="col-duration">0.78</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1607,7 +1607,7 @@ First few values not matching the pattern - [1867, 4039, 1702, 2735, 4559, 2429,
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_11_Validate_the_ZipCodeSuffix_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.37</td>
+          <td class="col-duration">0.64</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1622,24 +1622,8 @@ First few values not matching the pattern - [89270, 73111, 49308, 30867, 56581, 
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_12_Validate_the_BirthDate_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.37</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"><span class="error">E   AssertionError: all values in field BirthDate not following pattern</span><br/>    assert 3 == 0<br/> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
-BirthDate field should be populated or converted to a valid date format MM/DD/YYYY
-<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
-<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
-No of rows not matching the expected pattern - 3.
-First few values not matching the pattern - [&#x27;21-09-2020&#x27;, &#x27;2022/23/09&#x27;, &#x27;21-12-1939&#x27;]
-<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
-<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_14_Validate_the_SSN_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.37</td>
+          <td class="col-duration">0.66</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1655,7 +1639,7 @@ First few values not matching the pattern - [71101839, 13288303, 65187147, 43063
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_17_Validate_the_EmploymentDate_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.33</td>
+          <td class="col-duration">0.63</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1664,6 +1648,112 @@ EmploymentDate field should be populated or converted to a valid date format MM/
 <span class="ansi94">----------------------------------------------------------------------------------------------------</span>
 <span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
 EmploymentDate not present in input csv file
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_26_Validate_the_PLFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"><span class="error">E   KeyError: &#x27;PLFlag&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/><span class="error">E   KeyError: &#x27;PLFlag&#x27;</span><br/> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+PLFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+PLFlag not present in input csv file
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_29_Validate_the_FirstMortgageFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.57</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"><span class="error">E   KeyError: &#x27;FirstMortgageFlag&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/><span class="error">E   KeyError: &#x27;FirstMortgageFlag&#x27;</span><br/> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+FirstMortgageFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+FirstMortgageFlag not present in input csv file
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_33_Validate_the_DebitCardFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"><span class="error">E   KeyError: &#x27;DebitCardFlag&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/><span class="error">E   KeyError: &#x27;DebitCardFlag&#x27;</span><br/> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+DebitCardFlag field should be populated with one of the Boolean format values 0 or 1 or convertedto it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+DebitCardFlag not present in input csv file
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_34_Validate_the_NegShareWarningFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"><span class="error">E   KeyError: &#x27;NegShareWarningFlag&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/><span class="error">E   KeyError: &#x27;NegShareWarningFlag&#x27;</span><br/> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+NegShareWarningFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+NegShareWarningFlag not present in input csv file
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_47_Validate_the_PLTotal_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.68</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"><span class="error">E   KeyError: &#x27;PLTotal&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/><span class="error">E   KeyError: &#x27;PLTotal&#x27;</span><br/> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+PLTotal field should be populated with a  number. It may or may not have decimals
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+PLTotal not present in input csv file
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_48_Validate_the_SLTotal_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"><span class="error">E   KeyError: &#x27;SLTotal&#x27;</span><br/><br/>The above exception was the direct cause of the following exception:<br/><span class="error">E   KeyError: &#x27;SLTotal&#x27;</span><br/> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+SLTotal field should be populated with a  number. It may or may not have decimals
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+SLTotal not present in input csv file
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_49_Validate_the_CreditScore_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.73</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"><span class="error">E   AssertionError: all values in field CreditScore not following pattern</span><br/>    assert 4532 == 0<br/> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+CreditScore should be populated with  a number &lt;= 850 and &gt;= 350 and must be populated if CreditScoreDate is populated 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+No of rows not matching the expected pattern - 4532.
+First few values not matching the pattern - [306, 303, 341, 330, 311, 304, 320, 335, 335, 322]
 <span class="ansi94">----------------------------------------------------------------------------------------------------</span>
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
@@ -1703,7 +1793,7 @@ columns present in input file - [&#x27;MemberNumber&#x27;, &#x27;MasterAccount&#
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_4_Validate_record_count_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv-50000]</td>
-          <td class="col-duration">0.34</td>
+          <td class="col-duration">1.15</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1718,7 +1808,7 @@ actual number of rows in csv file - 50000
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_5_Validate_the_duplicate_records_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.60</td>
+          <td class="col-duration">0.85</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1736,7 +1826,7 @@ duplicate records count - 0
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_7_Validate_that_the_input_csv_file_is_not_empty[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.45</td>
+          <td class="col-duration">0.69</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1754,7 +1844,7 @@ is file empty - False
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_8_Validate_the_MasterAccount_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.68</td>
+          <td class="col-duration">0.70</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1769,7 +1859,7 @@ MasterAccount field value is following the pattern
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_9_Validate_the_State_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.36</td>
+          <td class="col-duration">0.71</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1783,8 +1873,23 @@ State field value is following the pattern
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_12_Validate_the_BirthDate_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+BirthDate field should be populated or converted to a valid date format MM/DD/YYYY
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+BirthDate field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_13_Validate_the_EmailAddress_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.36</td>
+          <td class="col-duration">0.70</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1799,7 +1904,7 @@ EmailAddress field value is following the pattern
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_15_Validate_the_Income_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.36</td>
+          <td class="col-duration">0.70</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1814,7 +1919,7 @@ Income field value is following the pattern
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_19_Validate_the_MemberStartDate_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.48</td>
+          <td class="col-duration">0.77</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1829,7 +1934,7 @@ MemberStartDate field value is following the pattern
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_20_Validate_the_SavingsAccountFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.39</td>
+          <td class="col-duration">0.68</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1844,7 +1949,7 @@ SavingsAccountFlag field value is following the pattern
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_21_Validate_the_CheckingFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.44</td>
+          <td class="col-duration">0.63</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1859,7 +1964,7 @@ CheckingFlag field value is following the pattern
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_22_Validate_the_CDFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.39</td>
+          <td class="col-duration">0.60</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1874,7 +1979,7 @@ CDFlag field value is following the pattern
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_23_Validate_the_MoneyMarketFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.35</td>
+          <td class="col-duration">0.60</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1889,7 +1994,7 @@ MoneyMarketFlag field value is following the pattern
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_24_Validate_the_AutoLoanFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
-          <td class="col-duration">0.36</td>
+          <td class="col-duration">0.64</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -1898,5 +2003,320 @@ AutoLoanFlag field should be populated with one of the Boolean format values 0 o
 <span class="ansi94">----------------------------------------------------------------------------------------------------</span>
 <span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
 AutoLoanFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_25_Validate_the_CreditCardFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.63</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+CreditCardFlag field should be populated with one of the Boolean format values 0 or 1 or convertedto it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+CreditCardFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_27_Validate_the_HELOCFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+HELOCFlag field should be populated with one of the Boolean format values 0 or 1 or convertedto it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+HELOCFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_28_Validate_the_HomeEquityLoanFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+HomeEquityLoanFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+HomeEquityLoanFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_30_Validate_the_StudentLoanFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.67</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+StudentLoanFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+StudentLoanFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_31_Validate_the_OnlineBankingFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+OnlineBankingFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+OnlineBankingFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_32_Validate_the_BillPayFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+BillPayFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+BillPayFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_35_Validate_the_BankruptcyWarningFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+BankruptcyWarningFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+BankruptcyWarningFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_36_Validate_the_DQWarningFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+DQWarningFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+DQWarningFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_37_Validate_the_BadAddressWarningFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.63</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+BadAddressWarningFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+BadAddressWarningFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_38_Validate_the_BadEmailWarningFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.60</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+BadEmailWarningFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+BadEmailWarningFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_39_Validate_the_OptOutFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.67</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+OptOutFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+OptOutFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_40_Validate_the_FIEmployeeFlag_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.69</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+FIEmployeeFlag field should be populated with one of the Boolean format values 0 or 1 or converted to it 
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+FIEmployeeFlag field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_41_Validate_the_DebtToIncomeRatio_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.63</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+DebtToIncomeRatio field should be populated with a value &gt;= 0 and &lt;= 100. Decimals are allowed
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+DebtToIncomeRatio field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_42_Validate_the_AutoTotal_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+AutoTotal field should be populated with a  number. It may or may not have decimals
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+AutoTotal field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_43_Validate_the_MortgageTotal_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+MortgageTotal field should be populated with a  number. It may or may not have decimals
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+MortgageTotal field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_44_Validate_the_2ndMortgageTotal_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+2ndMortgageTotal field should be populated with a  number. It may or may not have decimals
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+2ndMortgageTotal field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_45_Validate_the_CreditCardTotal_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+CreditCardTotal field should be populated with a  number. It may or may not have decimals
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+CreditCardTotal field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_46_Validate_the_HELOCTotal_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+HELOCTotal field should be populated with a  number. It may or may not have decimals
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+HELOCTotal field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_50_Validate_the_CreditScoreDate_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.44</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+CreditScoreDate should be be a valid date format MM/DD/YYYY and must be populated if CreditScore is populated
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+CreditScoreDate field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_51_Validate_the_HomePhone_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+HomePhone should be populated with one of the recognized Phone number format (###) ###-####
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+HomePhone field value is following the pattern
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_csvFileBasicValidation.py::test_TC_52_Validate_the_MobilePhone_field_in_the_input_csv_file[resources/csv/Customer_MR_NoDup.csv]</td>
+          <td class="col-duration">0.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/><span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Expected  ---------------------------------------------</span>
+MobilePhone should be populated with one of the recognized Phone number format (###) ###-####
+<span class="ansi94">----------------------------------------------------------------------------------------------------</span>
+<span class="ansi1"></span><span class="ansi1 ansi94">---------------------------------------------  Actual  ---------------------------------------------</span>
+MobilePhone field value is following the pattern
 <span class="ansi94">----------------------------------------------------------------------------------------------------</span>
 <br/></div></td></tr></tbody></table></body></html>

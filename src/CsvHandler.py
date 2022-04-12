@@ -12,6 +12,7 @@ pp = Patterns()
 class ComparisonType(Enum):
     REGEX = 'regex'
     FUNCTION = 'function'
+    DF_QUERY = 'dataframe_query'
 
 
 def get_csv_file_columns_list(csv_file_path, delimiter=','):
@@ -66,6 +67,12 @@ def get_list_values_not_following_condition(csv_file_path, column_name, comparis
     df = pd.read_csv(csv_file_path, delimiter=delimiter)
     filtered_result = filter(lambda x: not comparison_func(x), df[column_name].tolist())
     return list(filtered_result)
+
+
+def get_list_values_not_following_query(csv_file_path, column_name, query: str, delimiter=','):
+    df = pd.read_csv(csv_file_path, delimiter=delimiter)
+    filtered_result = df.query(expr=query)[column_name]
+    return list(filtered_result.tolist())
 
 
 def is_value_matches_regex(value, regex):

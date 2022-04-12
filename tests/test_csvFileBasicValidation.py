@@ -3,6 +3,7 @@ import re
 import logging
 import src.CsvHandler as CsvHandler
 import src.ExcelHandler as ExcelHandler
+from src import DataFrameQueries
 from src.ComparatorFunctions import ComparatorFunctions
 from src.CustomLogger import CustomLogger, ResultType
 from src.CsvHandler import ComparisonType
@@ -233,6 +234,284 @@ def test_TC_24_Validate_the_AutoLoanFlag_field_in_the_input_csv_file(input_csv_f
     validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
 
 
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_25_Validate_the_CreditCardFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'CreditCardFlag'
+    pattern = patterns.boolean
+    expectation = 'CreditCardFlag field should be populated with one of the Boolean format values 0 or 1 or converted' \
+                  'to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_26_Validate_the_PLFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'PLFlag'
+    pattern = patterns.boolean
+    expectation = 'PLFlag field should be populated with one of the Boolean format values 0 or 1 or converted ' \
+                  'to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_27_Validate_the_HELOCFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'HELOCFlag'
+    pattern = patterns.boolean
+    expectation = 'HELOCFlag field should be populated with one of the Boolean format values 0 or 1 or converted' \
+                  'to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_28_Validate_the_HomeEquityLoanFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'HomeEquityLoanFlag'
+    pattern = patterns.boolean
+    expectation = 'HomeEquityLoanFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_29_Validate_the_FirstMortgageFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'FirstMortgageFlag'
+    pattern = patterns.boolean
+    expectation = 'FirstMortgageFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_30_Validate_the_StudentLoanFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'StudentLoanFlag'
+    pattern = patterns.boolean
+    expectation = 'StudentLoanFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_31_Validate_the_OnlineBankingFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'OnlineBankingFlag'
+    pattern = patterns.boolean
+    expectation = 'OnlineBankingFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_32_Validate_the_BillPayFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'BillPayFlag'
+    pattern = patterns.boolean
+    expectation = 'BillPayFlag field should be populated with one of the Boolean format values 0 or 1 or converted ' \
+                  'to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_33_Validate_the_DebitCardFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'DebitCardFlag'
+    pattern = patterns.boolean
+    expectation = 'DebitCardFlag field should be populated with one of the Boolean format values 0 or 1 or converted' \
+                  'to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_34_Validate_the_NegShareWarningFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'NegShareWarningFlag'
+    pattern = patterns.boolean
+    expectation = 'NegShareWarningFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_35_Validate_the_BankruptcyWarningFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'BankruptcyWarningFlag'
+    pattern = patterns.boolean
+    expectation = 'BankruptcyWarningFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_36_Validate_the_DQWarningFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'DQWarningFlag'
+    pattern = patterns.boolean
+    expectation = 'DQWarningFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_37_Validate_the_BadAddressWarningFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'BadAddressWarningFlag'
+    pattern = patterns.boolean
+    expectation = 'BadAddressWarningFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_38_Validate_the_BadEmailWarningFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'BadEmailWarningFlag'
+    pattern = patterns.boolean
+    expectation = 'BadEmailWarningFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_39_Validate_the_OptOutFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'OptOutFlag'
+    pattern = patterns.boolean
+    expectation = 'OptOutFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_40_Validate_the_FIEmployeeFlag_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'FIEmployeeFlag'
+    pattern = patterns.boolean
+    expectation = 'FIEmployeeFlag field should be populated with one of the Boolean format values 0 or 1 or ' \
+                  'converted to it '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_41_Validate_the_DebtToIncomeRatio_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'DebtToIncomeRatio'
+    cmp_function = cmp_funcs.check_value_range_0_100
+    expectation = 'DebtToIncomeRatio field should be populated with a value >= 0 and <= 100. Decimals are allowed'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.FUNCTION, cmp_function,
+                                           expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_42_Validate_the_AutoTotal_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'AutoTotal'
+    cmp_function = cmp_funcs.check_is_value_a_number
+    expectation = 'AutoTotal field should be populated with a  number. It may or may not have decimals'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.FUNCTION, cmp_function,
+                                           expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_43_Validate_the_MortgageTotal_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'MortgageTotal'
+    cmp_function = cmp_funcs.check_is_value_a_number
+    expectation = 'MortgageTotal field should be populated with a  number. It may or may not have decimals'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.FUNCTION, cmp_function,
+                                           expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_44_Validate_the_2ndMortgageTotal_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = '2ndMortgageTotal'
+    cmp_function = cmp_funcs.check_is_value_a_number
+    expectation = '2ndMortgageTotal field should be populated with a  number. It may or may not have decimals'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.FUNCTION, cmp_function,
+                                           expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_45_Validate_the_CreditCardTotal_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'CreditCardTotal'
+    cmp_function = cmp_funcs.check_is_value_a_number
+    expectation = 'CreditCardTotal field should be populated with a  number. It may or may not have decimals'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.FUNCTION, cmp_function,
+                                           expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_46_Validate_the_HELOCTotal_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'HELOCTotal'
+    cmp_function = cmp_funcs.check_is_value_a_number
+    expectation = 'HELOCTotal field should be populated with a  number. It may or may not have decimals'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.FUNCTION, cmp_function,
+                                           expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_47_Validate_the_PLTotal_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'PLTotal'
+    cmp_function = cmp_funcs.check_is_value_a_number
+    expectation = 'PLTotal field should be populated with a  number. It may or may not have decimals'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.FUNCTION, cmp_function,
+                                           expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_48_Validate_the_SLTotal_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'SLTotal'
+    cmp_function = cmp_funcs.check_is_value_a_number
+    expectation = 'SLTotal field should be populated with a  number. It may or may not have decimals'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.FUNCTION, cmp_function,
+                                           expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_49_Validate_the_CreditScore_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'CreditScore'
+    query = DataFrameQueries.query_credit_score_field
+    expectation = 'CreditScore should be populated with  a number <= 850 and >= 350 and must be populated if ' \
+                  'CreditScoreDate is populated '
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.DF_QUERY, query, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_50_Validate_the_CreditScoreDate_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'CreditScoreDate'
+    query = DataFrameQueries.query_credit_score_date_field
+    expectation = 'CreditScoreDate should be be a valid date format MM/DD/YYYY and must be populated if CreditScore' \
+                  ' is populated'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.DF_QUERY, query, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_51_Validate_the_HomePhone_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'HomePhone'
+    pattern = patterns.phone_number
+    expectation = 'HomePhone should be populated with one of the recognized Phone number format (###) ###-####'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
+@pytest.mark.parametrize('input_csv_file_path',
+                         ['resources/csv/Customer_MR_NoDup.csv'])
+def test_TC_52_Validate_the_MobilePhone_field_in_the_input_csv_file(input_csv_file_path):
+    col_name = 'MobilePhone'
+    pattern = patterns.phone_number
+    expectation = 'MobilePhone should be populated with one of the recognized Phone number format (###) ###-####'
+    validate_column_value_as_per_standards(input_csv_file_path, col_name, ComparisonType.REGEX, pattern, expectation)
+
+
 def validate_column_value_as_per_standards(input_csv_file_path, col_name, c_type: ComparisonType, comparator,
                                            expectation):
     c_logger.print(f'{expectation}', ResultType.EXPECTED)
@@ -247,6 +526,10 @@ def validate_column_value_as_per_standards(input_csv_file_path, col_name, c_type
                 input_csv_file_path,
                 col_name,
                 comparator)
+        elif c_type == ComparisonType.DF_QUERY:
+            list_values_not_following_condition = CsvHandler.get_list_values_not_following_query(input_csv_file_path,
+                                                                                                 col_name,
+                                                                                                 comparator)
         else:
             raise Exception(f'{c_type} has not been implemented yet!')
 
